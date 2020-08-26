@@ -3,6 +3,7 @@ services: # services to run inside docker componse
   redis-server: # service name
     image: "redis" # image to use
   node-app:
+    restart: always
     build: . # building an image
     ports:
       - "8081:8081" # port mapping- [local:container]
